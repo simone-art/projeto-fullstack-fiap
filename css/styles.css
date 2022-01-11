@@ -1,0 +1,122 @@
+/* Variáveis na Css */
+:root{
+    --text-light: #ffff;
+    --bg-primary:grey;
+}
+
+/* Reset CSS  USEM FAÇAM SEMPRE */
+* {
+    margin: 0;
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+html{
+   /* Transição para os links que não funciona no safari*/ 
+   scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    /* largura  100% é sempre o padrão de um container*/
+    width: 100%;
+
+    /* altura */
+    height: 80px;
+
+    /* cor de fundo */
+    background-color: var(--bg-primary);
+
+    /* cor do texto */
+    color: var(--text-light);
+
+    /* posicionamento dos filhos do header - FlexBox - cuidado o valor a ser usado é flex
+        Só funciona quando aplicado ao container PAI....
+        O padrão é que os elementos fiquem um ao lado do outro - flex-direction: row
+        Quando usamos row - align-item alinha verticalmente
+        Quando usamos row - justify-content alinha horizontalmente
+    */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;    
+}
+
+.header-title {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.header-logo {
+    color: #dc143c;   
+}
+
+.menu ul {
+    /* tirar marcadores das listas */
+    list-style: none;
+    /* deixar as opções do menu uma ao lado da outra */
+    display: flex;
+}
+
+.menu-item {
+    /* alterando espaço entre as opções do menu */
+    margin: 0 15px;
+}
+
+.menu-item a {
+    /* cor dos links */
+    color:var(--text-light);
+
+    /* tirar o sublinhado */
+    text-decoration: none;
+
+    /* diminuir a fonte */
+    font-size: 14px;
+
+    /* peso da fonte */
+    font-weight: 900;
+}
+
+/* a regra só será aplicada quando passar o mouse sobre os links */
+.menu-item a:hover {
+    color: #dc143c;
+}
+
+/* classe para estilizar o login */
+.btn {
+    padding: 5px 30px;
+    border: 1px solid #dc143c;
+    border-radius: 7px;
+    background-color: #dc143c;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-color: transparent;
+}
+
+.container-carrinho{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;   
+}
+
+.carrinho{
+    width: 30px;
+    height: 30px;
+     
+}
+
+.cover-page{
+    margin-top: 5px;
+    width: 100%;
+    height: 120vh;
+}
+
+
+
