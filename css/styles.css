@@ -115,7 +115,79 @@ body {
 .cover-page{
     margin-top: 5px;
     width: 100%;
-    height: 120vh;
+    height: 80%;
+}
+
+.container-products-female{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.img-woman-sport{
+    margin-left: 100px;
+    width: 300px;
+    height: 400px;
+}
+
+/*services*/
+.services-container {
+    width: 95%;
+    /* min-height define a altura mínima e faz ajuste entre os elementos*/
+    min-height: 90vh;
+    /*border: 1px solid #000;*/
+    /*usamos margem con valor automático para centralizar o container-USADO PARA CONTAINERS*/
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* space evenly gera o mesmo espaçamento entre os elementos*/
+    justify-content: space-evenly;
+}
+
+.services-item{
+    width: 30%;
+    height: 450px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    /* cursor pointer mostra a mão na hora de passar o cursor*/
+    cursor: pointer;
+    transition: 5s;
+}
+
+.services-item:hover{
+    border: transparent;
+    box-shadow: 1px 1px 10px #ccc;
+}
+
+.services-item i{
+    color: #4e5fbe;
+    font-size: 50px;
+    margin: 16px 0;
+}
+
+.services-title{
+    font-size: 30px;
+    font-weight: 900px;
+    margin: 16px 0;
+}
+
+.services-text{
+    text-align: center;
+    line-height: 28px;
+}
+.img-products-female{
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
 }
 
 
