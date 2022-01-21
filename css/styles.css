@@ -134,7 +134,7 @@ body {
 }
 
 /*services*/
-.services-container {
+.services-container, .services-container-man{
     width: 95%;
     /* min-height define a altura mínima e faz ajuste entre os elementos*/
     min-height: 90vh;
@@ -238,6 +238,61 @@ body {
     background-color: #dc143c;
     border-color: #dc143c;
 }
+
+
+.container-program-fidelity{
+     width: 95%;
+    /* min-height define a altura mínima e faz ajuste entre os elementos*/
+    min-height: 90vh;
+    /*border: 1px solid #000;*/
+    /*usamos margem con valor automático para centralizar o container-USADO PARA CONTAINERS*/
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+     margin: 20px auto;
+    align-items: center;
+    /* space evenly gera o mesmo espaçamento entre os elementos*/
+    justify-content: space-evenly;
+
+}
+
+.img-man-surfer{
+    width: 350px;
+    height: 450px;
+    margin-left: 50px;
+}
+
+.services-title-fidelity{
+    font-size: 30px;
+    font-weight: 400px;
+    margin-left: 150px;
+    margin-bottom: 5px;
+}
+
+.services-text-fidelity{
+    font-size: 20px;
+    font-weight: 400px;
+    margin-left: 20px;
+    
+}
+
+.button-fidelity{
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 5px 30px;
+    border: 1px solid #dc143c;
+    background-color: #dc143c;
+    transition: .5s;
+    margin-left: 250px;
+    color: white;
+}
+
+.button-fidelity:hover{
+    background-color: transparent;
+}
+
+    
 
 
 
