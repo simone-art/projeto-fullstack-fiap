@@ -21,7 +21,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.header {
+.header, .header-footer{
     /* largura  100% é sempre o padrão de um container*/
     width: 100%;
 
@@ -290,6 +290,42 @@ body {
 
 .button-fidelity:hover{
     background-color: transparent;
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;  
+    background-color: var(--bg-primary); 
+    color: var(--text-light);
+}
+
+.footer{
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.informacoes-gerais{
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.redes-sociais{
+    width: 100%;
+    height: 80px;
+     margin-top: 20px;
+     margin-left: 300px;
+}
+
+.img-rrss{
+    width: 40px;
+    height: 40px;
 }
 
     
