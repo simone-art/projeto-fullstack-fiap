@@ -122,8 +122,11 @@ body {
     width: 100%;
     height: 80vh;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    border-radius: 50px;
+    margin-bottom: 10px;
 
 }
 
@@ -131,6 +134,40 @@ body {
     margin-left: 100px;
     width: 300px;
     height: 400px;
+}
+
+.texto-registrese {
+    font-size: 18px;
+}
+
+.registrese {
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-left: 10px;
+    background-color: gray;
+    margin-right: 130px;
+    color: black;
+    width: 50%;
+    background-color: white;
+}
+
+.input{
+    border-radius: 10px;
+}
+
+.nome, .sobrenome, .cpf, .senha, .confirmar {
+margin-top: 10px;
+margin-bottom: 20px;
+}
+
+.btn-enviar {
+    margin-bottom: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 250px;
+    background-color: purple;
+    color: white;
 }
 
 /*services*/
