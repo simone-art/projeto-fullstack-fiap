@@ -180,6 +180,14 @@ margin-right: 20px;
 font-size: 15px;
 }
 
+.alertas{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: --bg-primary;
+    padding-top: 10px;
+}
+
 
 /*services*/
 .services-container, .services-container-man{
