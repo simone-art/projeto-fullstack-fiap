@@ -1,6 +1,19 @@
 // formulario-regístrese//
 
 const form = document.getElementById("form");
+const inputs = document.querySelectorAll("#form input");
+
+const expresiones = {
+	adicioneNome: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+    adicioneEmail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    adicioneCpf: /^\d{11}$/, // 11 digitos.
+    adicioneSenha: /^.{4,12}$/, // 4 a 12 digitos.
+	confirmeSenha: /^.{4,12}$/ // 4 a 12 digitos.
+	
+}
+
+
+
 const adicioneNome = document.getElementById("adicioneNome");
 const adicioneEmail = document.getElementById("adicioneEmail");
 const adicioneCpf = document.getElementById("adicioneCpf");
@@ -9,60 +22,78 @@ const adicioneSenha = document.getElementById("adicioneSenha");
 const confirmeSenha = document.getElementById("confirmeSenha");
 const alertas = document.getElementById("alertas");
 
-form.addEventListener("submit", e=>{
-    e.preventDefault()
-    let alertas = "";
-    let entrar = false;
-    let regerxEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    alertas.innerHTML = "";
-    if(adicioneNome.value.length <2){
-        alertas += `O nome não é válido <br>`
-        entrar = true;
-    }
-    console.log("adicioneNome.value.length");
 
-    if(!regerxEmail.test(adicioneEmail.value)){
-        alertas += `O email não é válido <br>`
-        entrar = true;
-    }
+const validarCadastro = () =>{
+    console.log("Executando");
 
-    if(adicioneCpf.value.length < 11){
-         alertas += `O CPF não é válido <br>`
-         entrar = true;
-    }
+}
+ 
+inputs.forEach((input) => {
+    input.addEventListener('keyup', validarCadastro);
+    input.addEventListener('blur', validarCadastro);
+    console.log('Tecla Levantada');
+});
 
-    if(adicioneEndereco.value.length < 5){
-         alertas += `O endereço não é válido <br>`
-         entrar = true;
+form.addEventListener('submit', (e)=> {
+    e.preventDefault();
+});
 
-    }
 
-    if(adicioneSenha.value.length < 8){
-         alertas += `A senha não é válida <br>`
-         entrar = true;
-    }
 
-    if(confirmeSenha.value.length < 8){
-        alertas += `Senha não foi confirmada <br>`
-        entrar = true;
-    }
+// form.addEventListener('submit', (e)=>{
+//     e.preventDefault()
+//     let alertas = "";
+//     let entrar = false;
+//     let regerxEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+//     alertas.innerHTML = "";
+//     if(adicioneNome.value.length <2){
+//         alertas += `O nome não é válido <br>`
+//         entrar = true;
+//     }
+//     console.log("adicioneNome.value.length");
 
-    if(entrar){
-        alertas.innerHTML = alertas;
-    }else{
-        alertas.innerHTML = "Enviado";
-    }
+//     if(!regerxEmail.test(adicioneEmail.value)){
+//         alertas += `O email não é válido <br>`
+//         entrar = true;
+//     }
 
-    //BUTTON ENVIAR//
+//     if(adicioneCpf.value.length < 11){
+//          alertas += `O CPF não é válido <br>`
+//          entrar = true;
+//     }
 
-    let btnEnviar = document.getElementById("botaoEnviar");
+//     if(adicioneEndereco.value.length < 5){
+//          alertas += `O endereço não é válido <br>`
+//          entrar = true;
 
-    btnEnviar.addEventListener("click", function (e){
-        e.preventDefault();
-    })
-    console.log("clicou") 
+//     }
 
-})
+//     if(adicioneSenha.value.length < 8){
+//          alertas += `A senha não é válida <br>`
+//          entrar = true;
+//     }
+
+//     if(confirmeSenha.value.length < 8){
+//         alertas += `Senha não foi confirmada <br>`
+//         entrar = true;
+//     }
+
+//     if(entrar){
+//         alertas.innerHTML = alertas;
+//     }else{
+//         alertas.innerHTML = "Enviado";
+//     }
+
+//     //BUTTON ENVIAR//
+
+//     let btnEnviar = document.getElementById("botaoEnviar");
+
+//     btnEnviar.addEventListener("click", function (e){
+//         e.preventDefault();
+//     })
+//     console.log("clicou") 
+
+// })
 
 // adicioneNome.addEventListener("click", function(evento){
 //     evento.preventDefault();
