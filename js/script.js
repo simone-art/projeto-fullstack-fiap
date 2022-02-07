@@ -23,8 +23,10 @@ const confirmeSenha = document.getElementById("confirmeSenha");
 const alertas = document.getElementById("alertas");
 
 
-const validarCadastro = () =>{
-    console.log("Executando");
+const validarCadastro = (e) =>{
+    // console.log("Executando");
+    e.target.name
+    console.log(e.target.name);
 
 }
  
