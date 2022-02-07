@@ -3,7 +3,7 @@
 const form = document.getElementById("form");
 const inputs = document.querySelectorAll("#form input");
 
-const expresiones = {
+const expresoes = {
 	adicioneNome: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     adicioneEmail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     adicioneCpf: /^\d{11}$/, // 11 digitos.
@@ -23,10 +23,41 @@ const confirmeSenha = document.getElementById("confirmeSenha");
 const alertas = document.getElementById("alertas");
 
 
-const validarCadastro = (e) =>{
+const validarCadastro = (e) => {
     // console.log("Executando");
-    e.target.name
-    console.log(e.target.name);
+   // console.log(e.target.name);
+    switch (e.target.name) {
+        case "adicioneNome":
+        //console.log("Funciona!");
+        if(expresoes.adicioneNome.test(e.target.value)){
+             document.getElementById("grupo_nome_email").classList.remove("formulario__grupo-incorrecto")
+             document.getElementById("grupo_nome_email").classList.add("formulario__grupo-correcto")
+
+        }else{
+            document.getElementById("grupo_nome_email").classList.add("formulario__grupo-incorrecto");
+        }
+        break;
+
+        case "adicioneEmail":;
+       
+        break;
+
+        case "adicioneCpf":;
+        
+        break;
+
+        case "adicioneEndereco":;
+        
+        break;
+
+        case "adicioneSenha":;
+        
+        break;
+
+        case "confirmeSenha":;
+        
+        break;
+    }
 
 }
  
