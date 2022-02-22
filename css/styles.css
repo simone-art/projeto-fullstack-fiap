@@ -137,7 +137,7 @@ body {
 }
 
 .img-woman-sport{
-    margin-left: 100px;
+    margin-left: 50px;
     width: 300px;
     height: 400px;
 }
@@ -163,6 +163,7 @@ body {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
+   margin-right: 20px;
 
 }
 
@@ -188,17 +189,27 @@ font-size: 15px;
     padding-top: 10px;
 }
 
-.formulario__input-error {
+.formulario-cadastro {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.formulario_grupo_input {
+	position: relative;
+}
+
+.formulario_input-error {
 	font-size: 12px;
 	margin-bottom: 0;
 	display: none;
 }
 
-.formulario__input-error-activo {
+.formulario_input-error-activo {
 	display: block;
 }
 
-.formulario__label {
+.formulario_label {
 	display: block;
 	font-weight: 700;
 	padding: 10px;
@@ -206,7 +217,7 @@ font-size: 15px;
 }
 
 
-.formulario__validacion-estado {
+.formulario_validacion-estado {
 	position: absolute;
 	right: 10px;
 	bottom: 15px;
@@ -221,7 +232,7 @@ font-size: 15px;
 	opacity: 1;
 }
 
-.formulario__grupo-incorrecto .formulario__label {
+.formulario__grupo-incorrecto .formulario_label {
 	color: #bb2929;
 }
 
