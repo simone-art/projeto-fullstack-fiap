@@ -160,6 +160,7 @@ body {
 }
 
 .input-one{
+    width: 900px;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -217,7 +218,7 @@ font-size: 15px;
 }
 
 
-.formulario_validacion-estado {
+.formulario__validacion-estado {
 	position: absolute;
 	right: 10px;
 	bottom: 15px;
